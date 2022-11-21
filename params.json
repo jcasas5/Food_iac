@@ -2,11 +2,14 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-      "<first-parameter-name>": {
-        "value": "<first-value>"
+      "appServiceAppName": {
+        "value": "jseijas-app-bicep"
       },
-      "<second-parameter-name>": {
-        "value": "<second-value>"
+      "appServicePlanName": {
+        "value": "jseijas-asp-bicep"
+      },
+      "storageAccountName": {
+        "value": "jseijasstoragebicep"
       }
     }
   }

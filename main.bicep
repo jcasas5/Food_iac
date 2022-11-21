@@ -1,6 +1,6 @@
-param appServiceAppName string = 'jseijas-app-bicep'
-param appServicePlanName string = 'jseijas-asp-bicep'
-param storageAccountName string = 'jseijasstoragebicep'
+param appServiceAppName string = 'default-app-bicep'
+param appServicePlanName string = 'default-asp-bicep'
+param storageAccountName string = 'defaultstoragebicep'
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   name: storageAccountName
