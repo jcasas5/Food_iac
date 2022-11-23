@@ -10,12 +10,12 @@ jobs:
       # Checkout code
     - uses: actions/checkout@main
 
-      # Log into Azure
+      # Log into Azure with SP
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      # Lint Bicep code
+      # Lint Bicep code 
     - name: Run Bicep linter
       run: az bicep build --file ./main.bicep
 
