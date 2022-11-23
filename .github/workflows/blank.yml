@@ -17,7 +17,7 @@ jobs:
 
       # Lint Bicep code
     - name: Run Bicep linter
-      run: az bicep build --file ./MercuryHealth.IaC/main-1.bicep
+      run: az bicep build --file ./main.bicep
 
       # Deploy Bicep file to Development environment
     - name: Deploy to Dev
