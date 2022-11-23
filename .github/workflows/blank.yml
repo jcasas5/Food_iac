@@ -16,7 +16,8 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       # Lint Bicep code 
-
+    - name: Run Bicep linter
+      run: az bicep build --file ./main.bicep
 
       # Deploy Bicep file to Development environment
     - name: Deploy to Dev
