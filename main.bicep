@@ -16,7 +16,7 @@ param location string = resourceGroup().location
   'prod'
 ])
 param environmentType string = 'nonprod'
-
+# test
 var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
