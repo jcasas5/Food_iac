@@ -16,6 +16,14 @@ param location string = resourceGroup().location
   'prod'
 ])
 param environmentType string = 'nonprod'
+@secure()
+param dbhost string
+@secure()
+param dbuser string
+@secure()
+param dbpass string
+@secure()
+param dbname string
 
 var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'
 
@@ -38,6 +46,10 @@ module appService 'modules/appService.bicep' = {
     appServiceAppName: appServiceAppName
     appServicePlanName: appServicePlanName
     environmentType: environmentType
+    dbhost: dbhost
+    dbuser: dbuser
+    dbpass: dbpass
+    dbname: dbname
   }
 }
 
