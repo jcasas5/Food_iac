@@ -40,4 +40,5 @@ module appService 'modules/appService.bicep' = {
   }
 }
 
+# Outputs
 output appServiceAppHostName string = appService.outputs.appServiceAppHostName
