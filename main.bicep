@@ -16,6 +16,7 @@ param location string = resourceGroup().location
   'prod'
 ])
 param environmentType string = 'nonprod'
+
 @secure()
 param dbhost string
 @secure()
