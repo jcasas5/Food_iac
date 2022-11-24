@@ -19,12 +19,13 @@ jobs:
     needs: build
     environment:
       name: 'Development'
+    steps:
 
       # Log into Azure
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-        
+
       # Deploy Bicep file to Development environment
     - name: Deploy to Dev
       if: github.ref == 'refs/heads/dev'
@@ -41,7 +42,8 @@ jobs:
     needs: deploy-dev
     environment:
       name: 'Production'
-
+    steps:
+    
       # Log into Azure
     - uses: azure/login@v1
       with:
