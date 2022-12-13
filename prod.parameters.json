@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
       "appServiceAppName1": {
-          "value": "jcasasus-assignment-be-pr"
+          "value": "jcasasus-assignment-be-pro"
       },
       "appServiceAppName3": {
-          "value": "jcasasus-assignment-fe-pr"
+          "value": "jcasasus-assignment-fe-pro"
       },
       "appServicePlanName1": {
-          "value": "jcasasus-assignment-pr"
+          "value": "jcasasus-assignment-pro"
       },
       "storageAccountName": {
           "value": "jcasasusprodstorage"

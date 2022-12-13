@@ -2,20 +2,20 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-      "appServiceAppName1": {
-          "value": "jcasasus-assignment-be-pr"
+      "appServiceAppName2": {
+          "value": "jcasasus-assignment-be-dev"
       },
-      "appServiceAppName3": {
-          "value": "jcasasus-assignment-fe-pr"
+      "appServiceAppName4": {
+          "value": "jcasasus-assignment-fe-dev"
       },
-      "appServicePlanName1": {
-          "value": "jcasasus-assignment-pr"
+      "appServicePlanName2": {
+          "value": "jcasasus-assignment-dev"
       },
       "storageAccountName": {
-          "value": "jcasasusprodstorage"
+          "value": "jcasasusdevdstorage"
       },
       "environmentType": {
-          "value": "prod"
+          "value": "nonprod"
       }
   }
 }
