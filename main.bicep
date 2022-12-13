@@ -1,30 +1,30 @@
 @sys.description('The Web App name.')
 @minLength(3)
 @maxLength(30)
-param appServiceAppName1 string = 'portega-assignment-be-pr'
+param appServiceAppName1 string = 'jcasasus-assignment-be-pro'
 @sys.description('The Web App name.')
 @minLength(3)
 @maxLength(30)
-param appServiceAppName3 string = 'portega-assignment-fe-pr'
+param appServiceAppName3 string = 'jcasasus-assignment-fe-pro'
 @sys.description('The App Service Plan name.')
 @minLength(3)
 @maxLength(30)
-param appServicePlanName1 string = 'portega-assignment-pr'
+param appServicePlanName1 string = 'jcasasus-assignment-pro'
 @sys.description('The Web App name.')
 @minLength(3)
 @maxLength(30)
-param appServiceAppName2 string = 'portega-assignment-be-dv'
+param appServiceAppName2 string = 'jacasus-assignment-be-dev'
 @minLength(3)
 @maxLength(30)
-param appServiceAppName4 string = 'portega-assignment-fe-dv'
+param appServiceAppName4 string = 'jcasasus-assignment-fe-dev'
 @sys.description('The App Service Plan name.')
 @minLength(3)
 @maxLength(30)
-param appServicePlanName2 string = 'portega-assignment-dv'
+param appServicePlanName2 string = 'jcasasus-assignment-dev'
 @sys.description('The Storage Account name.')
 @minLength(3)
 @maxLength(30)
-param storageAccountName string = 'portegastorage'
+param storageAccountName string = 'jcasasusstorage'
 @allowed([
   'nonprod'
   'prod'
