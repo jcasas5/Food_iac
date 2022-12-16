@@ -1,21 +1,21 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-      "appServiceAppName2": {
-          "value": "jcasasus-assignment-be-dev"
-      },
-      "appServiceAppName4": {
-          "value": "jcasasus-assignment-fe-dev"
-      },
-      "appServicePlanName2": {
-          "value": "jcasasus-assignment-dev"
-      },
-      "storageAccountName": {
-          "value": "jcasasusdevstorage"
-      },
-      "environmentType": {
-          "value": "nonprod"
-      }
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appServiceAppName2": {
+            "value": "jcasasus-assignment-be-dev"
+        },
+        "appServiceAppName4": {
+            "value": "jcasasus-assignment-fe-dev"
+        },
+        "appServicePlanName2": {
+            "value": "jcasasus-assignment-dev"
+        },
+        "storageAccountName": {
+            "value": "jcasasusdevstorage"
+        },
+        "environmentType": {
+            "value": "nonprod"
+        }
+    }
   }
-}

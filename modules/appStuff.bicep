@@ -5,6 +5,8 @@ param dbhost string
 param dbuser string
 param dbpass string
 param dbname string
+param runtimeStack string
+
 
 var appServicePlanSkuName = 'B1'
 
@@ -36,6 +38,7 @@ properties: {
   serverFarmId: appServicePlan.id
   httpsOnly: true
   siteConfig: {
+    linuxFxVersion: runtimeStack
     appSettings: [
       {
         name: 'DBUSER'
@@ -52,6 +55,10 @@ properties: {
       {
         name: 'DBHOST'
         value: dbhost
+      }
+      {
+        name: 'SCM_DO_BUILD_DURING_DEPLOYMENT'
+        value: '1'
       }
     ]
   }
