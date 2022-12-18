@@ -11,9 +11,7 @@
         "appServicePlanName1": {
             "value": "jcasasus-assignment-pro"
         },
-        "storageAccountName": {
-            "value": "jcasasusprodstorage"
-        },
+
         "environmentType": {
             "value": "prod"
         }
