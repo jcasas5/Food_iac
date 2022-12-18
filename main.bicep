@@ -40,7 +40,9 @@ param dbpass string
 @secure()
 param dbname string
 
-param runtimeStack_fe string = 'Python|3.10'
+param runtimeStack_be string = 'Python|3.10'
+param runtimeStack_fe string = 'Node|14-lts'
+param startupCommand string = 'pm2 serve /home/site/wwwroot/dist --no-daemon --spa'
 
 var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'  
 
@@ -56,13 +58,13 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
     }
   }
 
-module appService1 'modules/appStuff.bicep' = if (environmentType == 'prod') {
+module appService1 'modules/appStuff_be.bicep' = if (environmentType == 'prod') {
   name: 'appService1'
   params: { 
     location: location
     appServiceAppName: appServiceAppName1
     appServicePlanName: appServicePlanName1
-    runtimeStack: runtimeStack_fe
+    runtimeStack: runtimeStack_be
     dbhost: dbhost
     dbuser: dbuser
     dbpass: dbpass
@@ -70,13 +72,14 @@ module appService1 'modules/appStuff.bicep' = if (environmentType == 'prod') {
   }
 }
 
-module appService3 'modules/appStuff.bicep' = if (environmentType == 'prod') {
+module appService3 'modules/appStuff_fe.bicep' = if (environmentType == 'prod') {
   name: 'appService3'
   params: { 
     location: location
     appServiceAppName: appServiceAppName3
     appServicePlanName: appServicePlanName1
     runtimeStack: runtimeStack_fe
+    startupCommand: startupCommand
     dbhost: dbhost
     dbuser: dbuser
     dbpass: dbpass
@@ -84,13 +87,13 @@ module appService3 'modules/appStuff.bicep' = if (environmentType == 'prod') {
   }
 }
 
-module appService2 'modules/appStuff.bicep' = if (environmentType == 'nonprod') {
+module appService2 'modules/appStuff_be.bicep' = if (environmentType == 'nonprod') {
   name: 'appService2'
   params: { 
     location: location
     appServiceAppName: appServiceAppName2
     appServicePlanName: appServicePlanName2
-    runtimeStack: runtimeStack_fe
+    runtimeStack: runtimeStack_be
     dbhost: dbhost
     dbuser: dbuser
     dbpass: dbpass
@@ -98,13 +101,14 @@ module appService2 'modules/appStuff.bicep' = if (environmentType == 'nonprod') 
   }
 }
 
-module appService4 'modules/appStuff.bicep' = if (environmentType == 'nonprod') {
+module appService4 'modules/appStuff_fe.bicep' = if (environmentType == 'nonprod') {
   name: 'appService4'
   params: { 
     location: location
     appServiceAppName: appServiceAppName4
     appServicePlanName: appServicePlanName2
     runtimeStack: runtimeStack_fe
+    startupCommand: startupCommand
     dbhost: dbhost
     dbuser: dbuser
     dbpass: dbpass
