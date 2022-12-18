@@ -11,9 +11,7 @@
         "appServicePlanName2": {
             "value": "jcasasus-assignment-dev"
         },
-        "storageAccountName": {
-            "value": "jcasasusdevstorage"
-        },
+        
         "environmentType": {
             "value": "nonprod"
         }
